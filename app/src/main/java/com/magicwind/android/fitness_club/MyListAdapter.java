@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -34,11 +35,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
+
         Picasso.with(mContext)
                 .load(mDatas.get(position))
                 .placeholder(R.mipmap.ic_launcher)//这里放默认显示的图片
                 .error(R.mipmap.ic_launcher)//这里放加载错误时显示的图片
                 .into(holder.myListImage);
+        holder.title.setText(Images.title[position]);
+        holder.description.setText(Images.description[position]);
     }
 
     @Override
@@ -48,10 +52,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView myListImage;
+        TextView title;
+        TextView description;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             myListImage = itemView.findViewById(R.id.imageView3);
+            title = itemView.findViewById(R.id.textView15);
+            description = itemView.findViewById(R.id.textView14);
         }
     }
 
