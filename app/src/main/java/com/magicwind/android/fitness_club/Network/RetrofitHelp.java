@@ -1,15 +1,8 @@
 package com.magicwind.android.fitness_club.Network;
 
-import android.widget.Toast;
-
-import com.magicwind.android.fitness_club.APIServer.*;
-import com.magicwind.android.fitness_club.Model.Responsebeen;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.magicwind.android.fitness_club.APIServer.APIServer;
 
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;

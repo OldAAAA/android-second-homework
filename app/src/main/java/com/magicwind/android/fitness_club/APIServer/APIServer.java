@@ -12,11 +12,11 @@ import retrofit2.http.Query;
 
 public interface APIServer {
 
-    @FormUrlEncoded
-    @POST("/login")
+@FormUrlEncoded
+@POST("/login")
     Observable<Responsebeen> login(@Field("email") String name, @Field("password") String password);
 
-    @FormUrlEncoded
-    @POST("/register")
+@FormUrlEncoded
+@POST("/register")
     Observable<Responsebeen> register(@Field("email") String name, @Field("password") String password, @Field("username") String username);
-}
+        }
